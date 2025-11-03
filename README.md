@@ -5,7 +5,7 @@ Portfolio profissional desenvolvido em Flutter Web com design moderno, animaçõ
 ## 🚀 Características
 
 - ✨ Animações suaves com blur fade
-- 🌓 Tema claro e escuro
+- 🌓 Tema escuro
 - 📱 Design responsivo
 - 🎨 Interface moderna e minimalista
 - 🔗 Links para redes sociais
