@@ -24,7 +24,7 @@ I'm passionate about building successful products, collaborating effectively wit
       period: "July 2024 - present",
       description:
           "At Neos, I contributed significantly to the implementation and maintenance of features. Among the apps managed by Neos, we have reached over 1 million users, achieving performance improvements and memory optimization, development and test coverage, updates and enhancements to the architecture, use of MobX for state management, use of Modular for routing and dependency injection, ensuring responsiveness, and adherence to SOLID principles and Clean Code practices.",
-      logoUrl: "assets\\images\\neos_tecnologia.jpg",
+      logoUrl: "assets/images/neos_tecnologia.jpg",
       technologies: [
         "Flutter",
         "Dart",
@@ -44,7 +44,7 @@ I'm passionate about building successful products, collaborating effectively wit
       period: "March 2022 - June 2024",
       description:
           "At Nuage IT's Everywhere, I played a key role in optimizing and maintaining scalable application features. My work involved continuous improvements in performance and memory efficiency, strong test coverage, and architectural enhancements. The projects followed best practices such as the use of MobX for state management, Modular for routing and dependency injection, and a focus on responsiveness. All development adhered to SOLID principles and Clean Code to ensure quality, maintainability, and long-term stability.",
-      logoUrl: "assets\\images\\nuageit_logo.jpg",
+      logoUrl: "assets/images/nuageit_logo.jpg",
       technologies: [
         "Flutter",
         "Dart",
@@ -64,7 +64,7 @@ I'm passionate about building successful products, collaborating effectively wit
       period: "November 2020 - February 2023",
       description:
           "At Todas Por Uma, I was responsible for implementing the application and its architecture from scratch, working closely with the CEO on a mission to save lives through technology. The app is now present in over 7 countries, impacting the lives of more than 25,000 Brazilians and users worldwide by providing greater safety in their daily routines. The project included the implementation of the MVVM architecture, integration with Firebase services such as Crashlytics, Authentication, Storage, and Firestore, as well as Google Maps and geolocation features. It also utilized Provider for state management and SQLite for internal data storage.",
-      logoUrl: "assets\\images\\todasporuma_logo.png",
+      logoUrl: "assets/images/todasporuma_logo.png",
       technologies: [
         "Flutter",
         "Dart",
@@ -87,7 +87,7 @@ I'm passionate about building successful products, collaborating effectively wit
       period: "February 2020 - March 2021",
       description:
           "As a Junior Test Analyst Apprentice, I supported the software quality assurance process by executing manual tests, analyzing results, and identifying bugs to ensure system reliability. I worked with SQL to validate data consistency and assist in troubleshooting, and used Excel for test documentation, reporting, and performance tracking. This experience strengthened my analytical thinking, attention to detail, and understanding of QA methodologies and software development workflows.",
-      logoUrl: "assets\\images\\funcao_sistemas_logo.png",
+      logoUrl: "assets/images/funcao_sistemas_logo.png",
       technologies: ["SQL Server", "Excel", "Manual Testing"],
     ),
   ];
@@ -97,19 +97,19 @@ I'm passionate about building successful products, collaborating effectively wit
       school: "FIAP",
       degree: "Tecnólogo em Análise e Desenvolvimento de Sistemas",
       period: "2023 - 2025",
-      logoUrl: "assets\\images\\fiap_logo.jpg",
+      logoUrl: "assets/images/fiap_logo.jpg",
     ),
     Education(
       school: "Etec SEBRAE",
       degree: "Especialização mobile",
       period: "2020 - 2020",
-      logoUrl: "assets\\images\\etec_logo.jpg",
+      logoUrl: "assets/images/etec_logo.jpg",
     ),
     Education(
       school: "Etec Professor Horácio Augusto da Silveira",
       degree: "Técnico em Análise e Desenvolvimento de Sistemas",
       period: "2018 - 2020",
-      logoUrl: "assets\\images\\etec_logo.jpg",
+      logoUrl: "assets/images/etec_logo.jpg",
     ),
   ];
 
@@ -210,25 +210,25 @@ I'm passionate about building successful products, collaborating effectively wit
       title: "Services Architecture / API / Mobile Architecture",
       organization: "FIAP",
       hours: "80 horas",
-      logoUrl: "assets\\images\\fiap_logo.jpg",
+      logoUrl: "assets/images/fiap_logo.jpg",
     ),
     Certification(
       title: "Mobile Marketing",
       organization: "FIAP",
       hours: "60 horas",
-      logoUrl: "assets\\images\\fiap_logo.jpg",
+      logoUrl: "assets/images/fiap_logo.jpg",
     ),
     Certification(
       title: "Técnicas de Negociação",
       organization: "FIAP",
       hours: "40 horas",
-      logoUrl: "assets\\images\\fiap_logo.jpg",
+      logoUrl: "assets/images/fiap_logo.jpg",
     ),
     Certification(
       title: "Scrum Fundamentals Certified",
       organization: "SCRUMstudy",
       hours: "16 horas",
-      logoUrl: "assets\\images\\scrum.png",
+      logoUrl: "assets/images/scrum.png",
     ),
   ];
 
