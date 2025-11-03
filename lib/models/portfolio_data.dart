@@ -100,15 +100,15 @@ I'm passionate about building successful products, collaborating effectively wit
       logoUrl: "assets/images/fiap_logo.jpg",
     ),
     Education(
-      school: "Etec Professor Horácio Augusto da Silveira",
-      degree: "Técnico em Análise e Desenvolvimento de Sistemas",
-      period: "2018 - 2020",
-      logoUrl: "assets/images/etec_logo.jpg",
-    ),
-    Education(
       school: "Etec SEBRAE",
       degree: "Especialização mobile",
       period: "2020 - 2020",
+      logoUrl: "assets/images/etec_logo.jpg",
+    ),
+    Education(
+      school: "Etec Professor Horácio Augusto da Silveira",
+      degree: "Técnico em Análise e Desenvolvimento de Sistemas",
+      period: "2018 - 2020",
       logoUrl: "assets/images/etec_logo.jpg",
     ),
   ];

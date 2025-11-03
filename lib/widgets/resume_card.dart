@@ -120,24 +120,28 @@ class _ResumeCardState extends State<ResumeCard>
                       ),
                     ),
                   ),
-                  const SizedBox(width: 16),
+                  const SizedBox(width: 12),
                   // Content
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        // Título e ícone de expansão
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Expanded(
                               child: Text(
                                 widget.title,
                                 style: theme.textTheme.titleMedium?.copyWith(
                                   fontWeight: FontWeight.w600,
+                                  fontSize: 16,
                                 ),
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
                               ),
                             ),
-                            if (hasExpandableContent)
+                            if (hasExpandableContent) ...[
+                              const SizedBox(width: 8),
                               RotationTransition(
                                 turns: _rotationAnimation,
                                 child: Icon(
@@ -146,25 +150,32 @@ class _ResumeCardState extends State<ResumeCard>
                                   size: 24,
                                 ),
                               ),
+                            ],
                           ],
                         ),
                         const SizedBox(height: 4),
+                        // Subtitle
                         Text(
                           widget.subtitle,
                           style: theme.textTheme.bodyMedium?.copyWith(
                             color: theme.textTheme.bodyMedium?.color
                                 ?.withOpacity(0.7),
+                            fontSize: 14,
+                          ),
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        const SizedBox(height: 6),
+                        // Period
+                        Text(
+                          widget.period,
+                          style: theme.textTheme.bodySmall?.copyWith(
+                            color: theme.textTheme.bodySmall?.color
+                                ?.withOpacity(0.6),
+                            fontSize: 13,
                           ),
                         ),
                       ],
-                    ),
-                  ),
-                  const SizedBox(width: 8),
-                  // Period
-                  Text(
-                    widget.period,
-                    style: theme.textTheme.bodySmall?.copyWith(
-                      color: theme.textTheme.bodySmall?.color?.withOpacity(0.6),
                     ),
                   ),
                 ],
@@ -174,7 +185,7 @@ class _ResumeCardState extends State<ResumeCard>
               AnimatedCrossFade(
                 firstChild: const SizedBox.shrink(),
                 secondChild: Padding(
-                  padding: const EdgeInsets.only(top: 16, left: 64),
+                  padding: const EdgeInsets.only(top: 16, left: 0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -185,6 +196,7 @@ class _ResumeCardState extends State<ResumeCard>
                             color: theme.textTheme.bodySmall?.color
                                 ?.withOpacity(0.7),
                             height: 1.5,
+                            fontSize: 13,
                           ),
                         ),
                       ],
@@ -216,6 +228,7 @@ class _ResumeCardState extends State<ResumeCard>
                                 style: theme.textTheme.bodySmall?.copyWith(
                                   color: theme.colorScheme.primary,
                                   fontWeight: FontWeight.w500,
+                                  fontSize: 12,
                                 ),
                               ),
                             );
