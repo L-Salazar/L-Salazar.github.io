@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # salazar_site
 
 A new Flutter project.
@@ -14,3 +15,6 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+=======
+# L-Salazar.github.io
+>>>>>>> da4e6f073b6980f5ce3ae78410c16d5314c22fec
