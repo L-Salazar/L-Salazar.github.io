@@ -58,7 +58,7 @@ class _CertificationCardState extends State<CertificationCard> {
               ),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(12),
-                child: Image.network(
+                child: Image.asset(
                   widget.logoUrl,
                   fit: BoxFit.cover,
                   errorBuilder: (context, error, stackTrace) {
