@@ -1,0 +1,139 @@
+{
+  "hero": {
+    "greeting": "Olá, eu sou {name} 👋"
+  },
+  "portfolio": {
+    "role": "Engenheiro de Software que se tornou Empreendedor",
+    "description": "Eu adoro construir coisas e ajudar pessoas. No momento, estou focado em criar aplicativos móveis impactantes usando Flutter.",
+    "about": "Engenheiro Mobile, especializado em Flutter.\nTrabalhando profissionalmente com Flutter e Dart desde 2021, construindo aplicativos móveis multiplataforma. Desde cedo, foquei em criar apps responsivos e eficientes, integrando APIs RESTful, gerenciando controle de versão com Git e aplicando práticas de arquitetura limpa e testes.\n\nEssa jornada me permitiu construir e publicar apps reais usando CI/CD, Scrum e Firebase — colocando aplicativos na App Store e Google Play.\n\nSou apaixonado por criar produtos de sucesso, colaborar efetivamente com times e melhorar constantemente fluxos de trabalho para aprimorar a experiência do usuário e resolver problemas com eficiência."
+  },
+  "sections": {
+    "about": {
+      "title": "Sobre"
+    },
+    "skills": {
+      "title": "Habilidades"
+    },
+    "work": {
+      "title": "Experiência Profissional"
+    },
+    "projects": {
+      "badge": "Meus Projetos",
+      "title": "Confira meus trabalhos mais recentes",
+      "subtitle": "Trabalhei em diversos projetos, de apps simples a aplicações de API complexas. Aqui estão alguns dos meus favoritos."
+    },
+    "education": {
+      "title": "Formação"
+    },
+    "certifications": {
+      "title": "Certificações",
+      "subtitle": "Algumas das minhas certificações profissionais"
+    },
+    "contact": {
+      "badge": "Contato",
+      "title": "Fale Comigo",
+      "line1": "Quer conversar? Me envie uma DM ",
+      "cta": "com uma pergunta direta no LinkedIn",
+      "line2": " e responderei assim que possível. Vai ser um prazer falar com você!"
+    }
+  },
+  "skills": {
+    "flutter": "Flutter",
+    "dart": "Dart",
+    "git": "Git",
+    "restful": "RESTful",
+    "apis": "APIs",
+    "mvvm": "MVVM",
+    "cicd": "CI/CD",
+    "java": "Java",
+    "agile": "Metodologias Ágeis",
+    "firebase": "Firebase",
+    "restful_apis": "APIs RESTful",
+    "state_management": "Gerenciamento de Estado",
+    "uiux": "Princípios de UI/UX",
+    "clean_code": "Clean Code",
+    "problem_solving": "Resolução de Problemas",
+    "adaptability": "Adaptabilidade"
+  },
+  "work": {
+    "neos": {
+      "role": "Desenvolvedor Mobile/Flutter",
+      "period": "Julho de 2024 - presente",
+      "description": "Na Neos, contribuí significativamente para implementação e manutenção de funcionalidades. Entre os apps gerenciados pela Neos, alcançamos mais de 1 milhão de usuários, obtendo melhorias de desempenho e otimização de memória, aumento de cobertura de testes, atualizações e aprimoramentos de arquitetura, uso de MobX para gerenciamento de estado, Modular para roteamento e injeção de dependência, garantindo responsividade e aderindo aos princípios SOLID e práticas de Clean Code."
+    },
+    "nuage": {
+      "role": "Desenvolvedor Mobile/Flutter",
+      "period": "Março de 2022 - Junho de 2024",
+      "description": "Na Nuage IT's Everywhere, tive papel chave na otimização e manutenção de funcionalidades escaláveis. Meu trabalho envolveu melhorias contínuas de desempenho e eficiência de memória, forte cobertura de testes e aprimoramentos de arquitetura. Os projetos seguiam boas práticas como uso de MobX para gerenciamento de estado, Modular para roteamento e injeção de dependência, e foco em responsividade. Todo o desenvolvimento seguiu princípios SOLID e Clean Code para garantir qualidade, manutenção e estabilidade a longo prazo."
+    },
+    "tpu": {
+      "role": "Desenvolvedor Mobile/Flutter",
+      "period": "Novembro de 2020 - Fevereiro de 2023",
+      "description": "Na Todas Por Uma, fui responsável por implementar o aplicativo e sua arquitetura do zero, trabalhando de perto com a CEO em uma missão de salvar vidas por meio da tecnologia. O app está presente em mais de 7 países, impactando a vida de mais de 25 mil brasileiros e usuários ao redor do mundo ao oferecer mais segurança no dia a dia. O projeto incluiu implementação da arquitetura MVVM, integração com serviços Firebase como Crashlytics, Authentication, Storage e Firestore, além de Google Maps e geolocalização. Também utilizou Provider para gerenciamento de estado e SQLite para armazenamento interno."
+    },
+    "funcao": {
+      "role": "Estagiário em Análise de Testes",
+      "period": "Fevereiro de 2020 - Março de 2021",
+      "description": "Como Estagiário em Análise de Testes, apoiei o processo de garantia de qualidade executando testes manuais, analisando resultados e identificando bugs para garantir a confiabilidade do sistema. Trabalhei com SQL para validar consistência de dados e auxiliar na resolução de problemas, e usei Excel para documentação de testes, relatórios e acompanhamento de desempenho. Essa experiência fortaleceu meu pensamento analítico, atenção aos detalhes e entendimento de metodologias de QA e fluxos de desenvolvimento de software."
+    }
+  },
+  "education": {
+    "fiap": {
+      "degree": "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+      "period": "2023 - 2025"
+    },
+    "etec_sebrae": {
+      "degree": "Especialização Mobile",
+      "period": "2020 - 2020"
+    },
+    "etec_horacio": {
+      "degree": "Técnico em Análise e Desenvolvimento de Sistemas",
+      "period": "2018 - 2020"
+    }
+  },
+  "projects": {
+    "eficientiza_platform": {
+      "title": "Mottu Eficientiza - Plataforma de Gestão",
+      "description": "Desenvolvi uma plataforma completa para gerenciar frotas de motocicletas da Mottu, aumentando a eficiência operacional e otimizando processos de manutenção.",
+      "dates": "Jan 2025 - Dez 2025"
+    },
+    "eficientiza_react": {
+      "title": "App React para o Mottu Eficientiza",
+      "description": "Criei uma aplicação web em React para a plataforma Eficientiza da Mottu, oferecendo uma interface intuitiva para gerenciar frotas e otimizar operações de manutenção.",
+      "dates": "Abril 2023 - Março 2024"
+    },
+    "eficientiza_api": {
+      "title": "API de Gestão Mottu em C#",
+      "description": "Desenvolvi uma API RESTful para a Mottu gerenciar frotas de motocicletas com recursos de rastreamento, agendamento de manutenção e análises de desempenho.",
+      "dates": "Jan 2025 - Dez 2025"
+    },
+    "alagaqui": {
+      "title": "Alagaqui - App contra Enchentes",
+      "description": "Desenvolvi um aplicativo móvel para ajudar usuários a identificar e evitar áreas com risco de enchentes em ambientes urbanos, aumentando a segurança em condições climáticas adversas.",
+      "dates": "Novembro 2024 - Dezembro 2024"
+    }
+  },
+  "certifications": {
+    "fiap_services": {
+      "title": "Arquitetura de Serviços / API / Arquitetura Mobile",
+      "organization": "FIAP",
+      "hours": "80 horas"
+    },
+    "fiap_mobile_marketing": {
+      "title": "Mobile Marketing",
+      "organization": "FIAP",
+      "hours": "60 horas"
+    },
+    "fiap_negotiation": {
+      "title": "Técnicas de Negociação",
+      "organization": "FIAP",
+      "hours": "40 horas"
+    },
+    "scrum": {
+      "title": "Scrum Fundamentals Certified",
+      "organization": "SCRUMstudy",
+      "hours": "16 horas"
+    }
+  }
+}
+

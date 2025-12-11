@@ -1,9 +1,23 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:salazar_site/screens/home_screen.dart';
 
-void main() {
-  runApp(const PortfolioApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
+
+  runApp(
+    EasyLocalization(
+      supportedLocales: const [
+        Locale('en', 'US'),
+        Locale('pt', 'BR'),
+      ],
+      path: 'assets/translations',
+      fallbackLocale: const Locale('en', 'US'),
+      child: const PortfolioApp(),
+    ),
+  );
 }
 
 class PortfolioApp extends StatefulWidget {
@@ -20,7 +34,10 @@ class _PortfolioAppState extends State<PortfolioApp> {
       title: 'Salazar Portfolio',
       debugShowCheckedModeBanner: false,
       theme: _buildDarkTheme(),
-      home: HomeScreen(),
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
+      home: const HomeScreen(),
     );
   }
 

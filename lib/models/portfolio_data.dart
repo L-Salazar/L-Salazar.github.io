@@ -1,18 +1,10 @@
 class PortfolioData {
   static const String name = "Leonardo";
   static const String fullName = "Leonardo Salazar";
-  static const String role = "Software Engineer turned Entrepreneur";
-  static const String description =
-      "I love building things and helping people. Currently, I'm focused on creating impactful mobile applications using Flutter.";
+  static const String role = "portfolio.role";
+  static const String description = "portfolio.description";
 
-  static const String aboutText = """
-Mobile Engineer, specialized in Flutter.
-Working professionally with Flutter and Dart since 2021, building cross-platform mobile applications. Early on, I focused on creating responsive and efficient apps by integrating RESTful APIs, managing version control with Git, and applying clean architecture and testing practices.
-
-This journey allowed me to build and deploy real-world apps using CI/CD, Scrum, and Firebase—successfully deploying apps to the App Store and Google Play.
-
-I'm passionate about building successful products, collaborating effectively with teams, and constantly improving workflows to enhance user experience and resolve issues efficiently.
-""";
+  static const String aboutText = "portfolio.about";
 
   static const String avatarUrl = "assets/images/profile_picture.jpg";
   static const String initials = "LS";
@@ -20,10 +12,9 @@ I'm passionate about building successful products, collaborating effectively wit
   static const List<WorkExperience> workExperience = [
     WorkExperience(
       company: "Neos Tecnologia",
-      role: "Mobile/Flutter Developer",
-      period: "July 2024 - present",
-      description:
-          "At Neos, I contributed significantly to the implementation and maintenance of features. Among the apps managed by Neos, we have reached over 1 million users, achieving performance improvements and memory optimization, development and test coverage, updates and enhancements to the architecture, use of MobX for state management, use of Modular for routing and dependency injection, ensuring responsiveness, and adherence to SOLID principles and Clean Code practices.",
+      role: "work.neos.role",
+      period: "work.neos.period",
+      description: "work.neos.description",
       logoUrl: "assets/images/neos_tecnologia.jpg",
       technologies: [
         "Flutter",
@@ -40,10 +31,9 @@ I'm passionate about building successful products, collaborating effectively wit
     ),
     WorkExperience(
       company: "Nuage IT's everywhere",
-      role: "Mobile/Flutter Developer",
-      period: "March 2022 - June 2024",
-      description:
-          "At Nuage IT's Everywhere, I played a key role in optimizing and maintaining scalable application features. My work involved continuous improvements in performance and memory efficiency, strong test coverage, and architectural enhancements. The projects followed best practices such as the use of MobX for state management, Modular for routing and dependency injection, and a focus on responsiveness. All development adhered to SOLID principles and Clean Code to ensure quality, maintainability, and long-term stability.",
+      role: "work.nuage.role",
+      period: "work.nuage.period",
+      description: "work.nuage.description",
       logoUrl: "assets/images/nuageit_logo.jpg",
       technologies: [
         "Flutter",
@@ -60,10 +50,9 @@ I'm passionate about building successful products, collaborating effectively wit
     ),
     WorkExperience(
       company: "Todas Por Uma",
-      role: "Mobile/Flutter Developer",
-      period: "November 2020 - February 2023",
-      description:
-          "At Todas Por Uma, I was responsible for implementing the application and its architecture from scratch, working closely with the CEO on a mission to save lives through technology. The app is now present in over 7 countries, impacting the lives of more than 25,000 Brazilians and users worldwide by providing greater safety in their daily routines. The project included the implementation of the MVVM architecture, integration with Firebase services such as Crashlytics, Authentication, Storage, and Firestore, as well as Google Maps and geolocation features. It also utilized Provider for state management and SQLite for internal data storage.",
+      role: "work.tpu.role",
+      period: "work.tpu.period",
+      description: "work.tpu.description",
       logoUrl: "assets/images/todasporuma_logo.png",
       technologies: [
         "Flutter",
@@ -83,10 +72,9 @@ I'm passionate about building successful products, collaborating effectively wit
     ),
     WorkExperience(
       company: "Função Sistemas",
-      role: "Test Analyst Intern",
-      period: "February 2020 - March 2021",
-      description:
-          "As a Junior Test Analyst Apprentice, I supported the software quality assurance process by executing manual tests, analyzing results, and identifying bugs to ensure system reliability. I worked with SQL to validate data consistency and assist in troubleshooting, and used Excel for test documentation, reporting, and performance tracking. This experience strengthened my analytical thinking, attention to detail, and understanding of QA methodologies and software development workflows.",
+      role: "work.funcao.role",
+      period: "work.funcao.period",
+      description: "work.funcao.description",
       logoUrl: "assets/images/funcao_sistemas_logo.png",
       technologies: ["SQL Server", "Excel", "Manual Testing"],
     ),
@@ -95,49 +83,48 @@ I'm passionate about building successful products, collaborating effectively wit
   static const List<Education> education = [
     Education(
       school: "FIAP",
-      degree: "Tecnólogo em Análise e Desenvolvimento de Sistemas",
-      period: "2023 - 2025",
+      degree: "education.fiap.degree",
+      period: "education.fiap.period",
       logoUrl: "assets/images/fiap_logo.jpg",
     ),
     Education(
       school: "Etec SEBRAE",
-      degree: "Especialização mobile",
-      period: "2020 - 2020",
+      degree: "education.etec_sebrae.degree",
+      period: "education.etec_sebrae.period",
       logoUrl: "assets/images/etec_logo.jpg",
     ),
     Education(
       school: "Etec Professor Horácio Augusto da Silveira",
-      degree: "Técnico em Análise e Desenvolvimento de Sistemas",
-      period: "2018 - 2020",
+      degree: "education.etec_horacio.degree",
+      period: "education.etec_horacio.period",
       logoUrl: "assets/images/etec_logo.jpg",
     ),
   ];
 
   static const List<String> skills = [
-    "Flutter",
-    "Dart",
-    "Git",
-    "Restful",
-    "APIs",
-    "MVVM",
-    "CI/CD",
-    "Java",
-    "Agile Methodologies",
-    "Firebase",
-    "RESTful APIs",
-    "State Management",
-    "UI/UX Design Principles",
-    "Clean Code",
-    "Problem Solving",
-    "Adaptability",
+    "skills.flutter",
+    "skills.dart",
+    "skills.git",
+    "skills.restful",
+    "skills.apis",
+    "skills.mvvm",
+    "skills.cicd",
+    "skills.java",
+    "skills.agile",
+    "skills.firebase",
+    "skills.restful_apis",
+    "skills.state_management",
+    "skills.uiux",
+    "skills.clean_code",
+    "skills.problem_solving",
+    "skills.adaptability",
   ];
 
   static const List<Project> projects = [
     Project(
-      title: "Mottu Eficientiza - Management Platform",
-      description:
-          "Developed a comprehensive platform to manage motorcycle fleets for Mottu, enhancing operational efficiency and streamlining maintenance processes.",
-      dates: "Jan 2025 - Dec 2025",
+      title: "projects.eficientiza_platform.title",
+      description: "projects.eficientiza_platform.description",
+      dates: "projects.eficientiza_platform.dates",
       technologies: [
         "Java",
         "Spring Boot",
@@ -154,10 +141,9 @@ I'm passionate about building successful products, collaborating effectively wit
       links: ["https://github.com/L-Salazar/Java-Sprint-3"],
     ),
     Project(
-      title: "React App for Mottu Eficientiza",
-      description:
-          "Developed a React-based web application for Mottu's Eficientiza platform, providing an intuitive interface for managing motorcycle fleets and streamlining maintenance operations.",
-      dates: "April 2023 - March 2024",
+      title: "projects.eficientiza_react.title",
+      description: "projects.eficientiza_react.description",
+      dates: "projects.eficientiza_react.dates",
       technologies: [
         "React Native",
         "JavaScript",
@@ -170,10 +156,9 @@ I'm passionate about building successful products, collaborating effectively wit
       links: ["https://github.com/AntonioCarvalhoFIAP/challenge-3-L-Salazar"],
     ),
     Project(
-      title: "Mottu Management API C#",
-      description:
-          "Developed a RESTful API for Mottu to efficiently manage motorcycle fleets, incorporating features for tracking, maintenance scheduling, and performance analytics.",
-      dates: "Jan 2025 - Dec 2025",
+      title: "projects.eficientiza_api.title",
+      description: "projects.eficientiza_api.description",
+      dates: "projects.eficientiza_api.dates",
       technologies: [
         ".NET",
         "C#",
@@ -189,10 +174,9 @@ I'm passionate about building successful products, collaborating effectively wit
     ),
 
     Project(
-      title: "Alagaqui - Flooding Solution App",
-      description:
-          "Developed a mobile application to help users identify and avoid flooding-prone areas in urban environments, enhancing safety during adverse weather conditions.",
-      dates: "November 2024 - December 2024",
+      title: "projects.alagaqui.title",
+      description: "projects.alagaqui.description",
+      dates: "projects.alagaqui.dates",
       technologies: [
         "React Native",
         "JavaScript",
@@ -207,27 +191,27 @@ I'm passionate about building successful products, collaborating effectively wit
 
   static const List<Certification> certifications = [
     Certification(
-      title: "Services Architecture / API / Mobile Architecture",
-      organization: "FIAP",
-      hours: "80 horas",
+      title: "certifications.fiap_services.title",
+      organization: "certifications.fiap_services.organization",
+      hours: "certifications.fiap_services.hours",
       logoUrl: "assets/images/fiap_logo.jpg",
     ),
     Certification(
-      title: "Mobile Marketing",
-      organization: "FIAP",
-      hours: "60 horas",
+      title: "certifications.fiap_mobile_marketing.title",
+      organization: "certifications.fiap_mobile_marketing.organization",
+      hours: "certifications.fiap_mobile_marketing.hours",
       logoUrl: "assets/images/fiap_logo.jpg",
     ),
     Certification(
-      title: "Técnicas de Negociação",
-      organization: "FIAP",
-      hours: "40 horas",
+      title: "certifications.fiap_negotiation.title",
+      organization: "certifications.fiap_negotiation.organization",
+      hours: "certifications.fiap_negotiation.hours",
       logoUrl: "assets/images/fiap_logo.jpg",
     ),
     Certification(
-      title: "Scrum Fundamentals Certified",
-      organization: "SCRUMstudy",
-      hours: "16 horas",
+      title: "certifications.scrum.title",
+      organization: "certifications.scrum.organization",
+      hours: "certifications.scrum.hours",
       logoUrl: "assets/images/scrum.png",
     ),
   ];

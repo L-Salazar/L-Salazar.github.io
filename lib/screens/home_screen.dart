@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:salazar_site/widgets/animated_skill_chip.dart';
 import 'package:salazar_site/widgets/certification_card.dart';
@@ -29,7 +30,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     final size = MediaQuery.of(context).size;
     final isDesktop = size.width > 768;
 
@@ -51,6 +51,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        _buildLanguageToggle(),
+                        const SizedBox(height: 24),
                         _buildHeroSection(),
                         const SizedBox(height: 80),
                         _buildAboutSection(),
@@ -85,6 +87,37 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  Widget _buildLanguageToggle() {
+    final locale = context.locale;
+
+    return Align(
+      alignment: Alignment.centerRight,
+      child: ToggleButtons(
+        borderRadius: BorderRadius.circular(8),
+        constraints: const BoxConstraints(minHeight: 36, minWidth: 48),
+        isSelected: [locale.languageCode == 'en', locale.languageCode == 'pt'],
+        onPressed: (index) {
+          final newLocale = index == 0
+              ? const Locale('en', 'US')
+              : const Locale('pt', 'BR');
+          if (newLocale != locale) {
+            context.setLocale(newLocale);
+          }
+        },
+        children: const [
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 6),
+            child: Text('EN'),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 6),
+            child: Text('PT'),
+          ),
+        ],
+      ),
+    );
+  }
+
   Widget _buildHeroSection() {
     final theme = Theme.of(context);
 
@@ -100,7 +133,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 BlurFade(
                   delay: Duration(milliseconds: (blurFadeDelay * 1000).toInt()),
                   child: Text(
-                    "Hi, I'm ${PortfolioData.name} 👋",
+                    "hero.greeting".tr(namedArgs: {'name': PortfolioData.name}),
                     style: theme.textTheme.displaySmall?.copyWith(
                       fontWeight: FontWeight.bold,
                       fontSize: 36,
@@ -111,7 +144,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 BlurFade(
                   delay: Duration(milliseconds: (blurFadeDelay * 2000).toInt()),
                   child: Text(
-                    PortfolioData.description,
+                    PortfolioData.description.tr(),
                     style: theme.textTheme.titleMedium?.copyWith(
                       color: theme.textTheme.bodyMedium?.color?.withOpacity(
                         0.7,
@@ -168,7 +201,7 @@ class _HomeScreenState extends State<HomeScreen> {
         BlurFade(
           delay: Duration(milliseconds: (blurFadeDelay * 3000).toInt()),
           child: Text(
-            "About",
+            "sections.about.title".tr(),
             style: theme.textTheme.headlineSmall?.copyWith(
               fontWeight: FontWeight.bold,
             ),
@@ -178,7 +211,7 @@ class _HomeScreenState extends State<HomeScreen> {
         BlurFade(
           delay: Duration(milliseconds: (blurFadeDelay * 4000).toInt()),
           child: Text(
-            PortfolioData.aboutText,
+            PortfolioData.aboutText.tr(),
             style: theme.textTheme.bodyMedium?.copyWith(
               color: theme.textTheme.bodyMedium?.color?.withOpacity(0.7),
               height: 1.6,
@@ -198,7 +231,7 @@ class _HomeScreenState extends State<HomeScreen> {
         BlurFade(
           delay: Duration(milliseconds: (blurFadeDelay * 5000).toInt()),
           child: Text(
-            "Work Experience",
+            "sections.work.title".tr(),
             style: theme.textTheme.headlineSmall?.copyWith(
               fontWeight: FontWeight.bold,
             ),
@@ -217,9 +250,9 @@ class _HomeScreenState extends State<HomeScreen> {
               child: ResumeCard(
                 logoUrl: work.logoUrl,
                 title: work.company,
-                subtitle: work.role,
-                period: work.period,
-                description: work.description,
+                subtitle: work.role.tr(),
+                period: work.period.tr(),
+                description: work.description.tr(),
                 technologies: work.technologies,
               ),
             ),
@@ -238,7 +271,7 @@ class _HomeScreenState extends State<HomeScreen> {
         BlurFade(
           delay: Duration(milliseconds: (blurFadeDelay * 7000).toInt()),
           child: Text(
-            "Education",
+            "sections.education.title".tr(),
             style: theme.textTheme.headlineSmall?.copyWith(
               fontWeight: FontWeight.bold,
             ),
@@ -257,8 +290,8 @@ class _HomeScreenState extends State<HomeScreen> {
               child: ResumeCard(
                 logoUrl: edu.logoUrl,
                 title: edu.school,
-                subtitle: edu.degree,
-                period: edu.period,
+                subtitle: edu.degree.tr(),
+                period: edu.period.tr(),
               ),
             ),
           );
@@ -276,7 +309,7 @@ class _HomeScreenState extends State<HomeScreen> {
         BlurFade(
           delay: Duration(milliseconds: (blurFadeDelay * 9000).toInt()),
           child: Text(
-            "Skills",
+            "sections.skills.title".tr(),
             style: theme.textTheme.headlineSmall?.copyWith(
               fontWeight: FontWeight.bold,
             ),
@@ -291,7 +324,7 @@ class _HomeScreenState extends State<HomeScreen> {
             final skill = entry.value;
 
             return AnimatedSkillChip(
-              label: skill,
+              label: skill.tr(),
               delay: Duration(
                 milliseconds:
                     (blurFadeDelay * 1000).toInt() + 300 + (index * 80),
@@ -307,8 +340,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _buildProjectsSection() {
     final theme = Theme.of(context);
-    final size = MediaQuery.of(context).size;
-    final isDesktop = size.width > 768;
 
     return Column(
       children: [
@@ -326,7 +357,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   borderRadius: BorderRadius.circular(6),
                 ),
                 child: Text(
-                  "My Projects",
+                  "sections.projects.badge".tr(),
                   style: theme.textTheme.bodySmall?.copyWith(
                     color: theme.colorScheme.surface,
                   ),
@@ -334,7 +365,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               const SizedBox(height: 16),
               Text(
-                "Check out my latest work",
+                "sections.projects.title".tr(),
                 style: theme.textTheme.displaySmall?.copyWith(
                   fontWeight: FontWeight.bold,
                   fontSize: 32,
@@ -343,7 +374,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               const SizedBox(height: 12),
               Text(
-                "I've worked on a variety of projects, from simple Apps to complex API applications. Here are a few of my favorites.",
+                "sections.projects.subtitle".tr(),
                 style: theme.textTheme.bodyLarge?.copyWith(
                   color: theme.textTheme.bodyMedium?.color?.withOpacity(0.7),
                 ),
@@ -375,9 +406,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: SizedBox(
                     width: childWidth,
                     child: ProjectCard(
-                      title: project.title,
-                      description: project.description,
-                      dates: project.dates,
+                      title: project.title.tr(),
+                      description: project.description.tr(),
+                      dates: project.dates.tr(),
                       technologies: project.technologies,
                       image: project.image,
                       links: project.links,
@@ -404,14 +435,14 @@ class _HomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Certifications",
+                "sections.certifications.title".tr(),
                 style: theme.textTheme.headlineSmall?.copyWith(
                   fontWeight: FontWeight.bold,
                 ),
               ),
               const SizedBox(height: 8),
               Text(
-                "Here are some of my professional certifications",
+                "sections.certifications.subtitle".tr(),
                 style: theme.textTheme.bodyMedium?.copyWith(
                   color: theme.textTheme.bodyMedium?.color?.withOpacity(0.7),
                 ),
@@ -430,9 +461,9 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Padding(
               padding: const EdgeInsets.only(bottom: 12),
               child: CertificationCard(
-                title: cert.title,
-                organization: cert.organization,
-                hours: cert.hours,
+                title: cert.title.tr(),
+                organization: cert.organization.tr(),
+                hours: cert.hours.tr(),
                 logoUrl: cert.logoUrl,
               ),
             ),
@@ -456,7 +487,7 @@ class _HomeScreenState extends State<HomeScreen> {
               borderRadius: BorderRadius.circular(6),
             ),
             child: Text(
-              "Contact",
+              "sections.contact.badge".tr(),
               style: theme.textTheme.bodySmall?.copyWith(
                 color: theme.colorScheme.surface,
               ),
@@ -464,7 +495,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           const SizedBox(height: 16),
           Text(
-            "Get in Touch",
+            "sections.contact.title".tr(),
             style: theme.textTheme.displaySmall?.copyWith(
               fontWeight: FontWeight.bold,
               fontSize: 32,
@@ -477,7 +508,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Column(
               children: [
                 Text(
-                  "Want to chat? Just shoot me a dm ",
+                  "sections.contact.line1".tr(),
                   style: theme.textTheme.bodyLarge?.copyWith(
                     color: theme.textTheme.bodyMedium?.color?.withOpacity(0.7),
                   ),
@@ -487,7 +518,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   onTap: () =>
                       _launchUrl(PortfolioData.socialLinks['linkedin']!.url),
                   child: Text(
-                    "with a direct question on LinkedIn",
+                    "sections.contact.cta".tr(),
                     style: theme.textTheme.bodyLarge?.copyWith(
                       color: Color(0xFF10B981),
                       decoration: TextDecoration.underline,
@@ -496,7 +527,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 Text(
-                  " and I'll respond whenever I can. Looking forward to connecting with you!",
+                  "sections.contact.line2".tr(),
                   style: theme.textTheme.bodyLarge?.copyWith(
                     color: theme.textTheme.bodyMedium?.color?.withOpacity(0.7),
                   ),
