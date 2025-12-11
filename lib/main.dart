@@ -9,10 +9,8 @@ Future<void> main() async {
 
   runApp(
     EasyLocalization(
-      supportedLocales: const [
-        Locale('en', 'US'),
-        Locale('pt', 'BR'),
-      ],
+      supportedLocales: const [Locale('en', 'US'), Locale('pt', 'BR')],
+      startLocale: const Locale('en', 'US'),
       path: 'assets/translations',
       fallbackLocale: const Locale('en', 'US'),
       child: const PortfolioApp(),
